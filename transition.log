@@ -1,0 +1,38 @@
+2023-12-17 18:41:24,437 - INFO - Added to queue: Videos/Melancholic.mp4
+2023-12-17 18:41:24,438 - INFO - Added to queue: Videos/Colorful.mp4
+2023-12-17 18:41:24,438 - INFO - Running command: ffmpeg -y -i Videos/Melancholic.mp4 -t 2 -c:v h264_nvenc -preset fast first_end.mp4
+2023-12-17 18:41:24,765 - INFO - Command finished successfully.
+2023-12-17 18:41:24,765 - INFO - Running command: ffmpeg -ss 0 -y -i Videos/Colorful.mp4 -t 2 -c:v h264_nvenc -preset fast second_start.mp4
+2023-12-17 18:41:25,081 - INFO - Command finished successfully.
+2023-12-17 18:41:25,081 - INFO - Running command: ffmpeg -y -i first_end.mp4 -i second_start.mp4 -filter_complex         "[0:v]format=pix_fmts=yuva420p,fade=t=out:st=0:d=2:alpha=1[va0];         [1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=2:alpha=1[va1];         [va0][va1]overlay[vo]" -map "[vo]" -c:v h264_nvenc -preset fast crossfade.mp4
+2023-12-17 18:41:25,584 - INFO - Command finished successfully.
+2023-12-17 18:41:25,584 - INFO - Running command: ffmpeg -y -i Videos/Melancholic.mp4 -t 2 -c:v h264_nvenc -preset fast first_part.mp4
+2023-12-17 18:41:25,897 - INFO - Command finished successfully.
+2023-12-17 18:41:25,897 - INFO - Running command: ffmpeg -y -ss  2 -i Videos/Colorful.mp4 -c:v h264_nvenc -preset fast second_part.mp4
+2023-12-17 18:41:26,268 - INFO - Command finished successfully.
+2023-12-17 18:41:26,268 - INFO - Running command: ffmpeg -y -f concat -safe 0 -i files.txt -c copy output_video1.mp4
+2023-12-17 18:41:26,339 - INFO - Command finished successfully.
+2023-12-17 18:41:31,341 - INFO - Running command: ffmpeg -y -i Videos/Melancholic.mp4 -t 2 -c:v h264_nvenc -preset fast first_end.mp4
+2023-12-17 18:41:31,679 - INFO - Command finished successfully.
+2023-12-17 18:41:31,679 - INFO - Running command: ffmpeg -ss 0 -y -i Videos/Colorful.mp4 -t 2 -c:v h264_nvenc -preset fast second_start.mp4
+2023-12-17 18:41:32,000 - INFO - Command finished successfully.
+2023-12-17 18:41:32,000 - INFO - Running command: ffmpeg -y -i first_end.mp4 -i second_start.mp4 -filter_complex         "[0:v]format=pix_fmts=yuva420p,fade=t=out:st=0:d=2:alpha=1[va0];         [1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=2:alpha=1[va1];         [va0][va1]overlay[vo]" -map "[vo]" -c:v h264_nvenc -preset fast crossfade.mp4
+2023-12-17 18:41:32,503 - INFO - Command finished successfully.
+2023-12-17 18:41:32,503 - INFO - Running command: ffmpeg -y -i Videos/Melancholic.mp4 -t 2 -c:v h264_nvenc -preset fast first_part.mp4
+2023-12-17 18:41:32,839 - INFO - Command finished successfully.
+2023-12-17 18:41:32,839 - INFO - Running command: ffmpeg -y -ss  2 -i Videos/Colorful.mp4 -c:v h264_nvenc -preset fast second_part.mp4
+2023-12-17 18:41:33,221 - INFO - Command finished successfully.
+2023-12-17 18:41:33,221 - INFO - Running command: ffmpeg -y -f concat -safe 0 -i files.txt -c copy output_video1.mp4
+2023-12-17 18:41:33,286 - INFO - Command finished successfully.
+2023-12-17 18:41:38,288 - INFO - Running command: ffmpeg -y -i Videos/Melancholic.mp4 -t 2 -c:v h264_nvenc -preset fast first_end.mp4
+2023-12-17 18:41:38,642 - INFO - Command finished successfully.
+2023-12-17 18:41:38,642 - INFO - Running command: ffmpeg -ss 0 -y -i Videos/Colorful.mp4 -t 2 -c:v h264_nvenc -preset fast second_start.mp4
+2023-12-17 18:41:38,958 - INFO - Command finished successfully.
+2023-12-17 18:41:38,958 - INFO - Running command: ffmpeg -y -i first_end.mp4 -i second_start.mp4 -filter_complex         "[0:v]format=pix_fmts=yuva420p,fade=t=out:st=0:d=2:alpha=1[va0];         [1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=2:alpha=1[va1];         [va0][va1]overlay[vo]" -map "[vo]" -c:v h264_nvenc -preset fast crossfade.mp4
+2023-12-17 18:41:39,453 - INFO - Command finished successfully.
+2023-12-17 18:41:39,454 - INFO - Running command: ffmpeg -y -i Videos/Melancholic.mp4 -t 2 -c:v h264_nvenc -preset fast first_part.mp4
+2023-12-17 18:41:39,763 - INFO - Command finished successfully.
+2023-12-17 18:41:39,763 - INFO - Running command: ffmpeg -y -ss  2 -i Videos/Colorful.mp4 -c:v h264_nvenc -preset fast second_part.mp4
+2023-12-17 18:41:40,139 - INFO - Command finished successfully.
+2023-12-17 18:41:40,140 - INFO - Running command: ffmpeg -y -f concat -safe 0 -i files.txt -c copy output_video1.mp4
+2023-12-17 18:41:40,209 - INFO - Command finished successfully.

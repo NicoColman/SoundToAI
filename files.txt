@@ -1,0 +1,3 @@
+file 'first_part.mp4'
+file 'crossfade.mp4'
+file 'second_part.mp4'
